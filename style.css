@@ -1,0 +1,146 @@
+/* 1. Global Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #eef2f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px; /* Mobile par thoda gap dene ke liye */
+}
+
+/* 2. Main Container (Responsive Width) */
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px; /* Laptop par isse zyada bada nahi hoga */
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.text h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* 3. Options Container */
+#options {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: ek ke niche ek */
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+#options button {
+    background: #f8f9fa;
+    border: 2px solid #edeff2;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: left;
+    color: #444;
+}
+
+#options button:hover {
+    border-color: #007bff;
+    background-color: #e7f1ff;
+    transform: translateY(-2px); /* Halka sa upar uthega hover par */
+}
+
+#options button:active {
+    transform: scale(0.98); /* Click karne par dabne wala effect */
+}
+
+/* 4. Action Buttons (Submit & Next) */
+.submitBtn, .nextBtn {
+    margin-bottom: 12px;
+}
+
+#submit, #next {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#submit {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+}
+
+#next {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+#next:disabled {
+    background: #ccc;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+/* 5. Score Section */
+.scoreBox {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 15px;
+    border-top: 2px dashed #eee;
+}
+
+#ScoreOutput {
+    font-size: 18px;
+    font-weight: 700;
+    color: #555;
+}
+
+#score {
+    color: #007bff;
+    font-size: 22px;
+}
+
+/* 6. RESPONSIVE MEDIA QUERIES */
+
+/* Chote Mobile Phones ke liye (e.g. iPhone SE) */
+@media (max-width: 380px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .text h2 {
+        font-size: 1.1rem;
+    }
+    
+    #options button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Tablets ke liye agar aap chaho ki options side-by-side ho jaye (Optional) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+        padding: 40px;
+    }
+}

@@ -192,25 +192,25 @@ submitBtnEl.addEventListener('click', checkAnswer);
 
 optionEl1.addEventListener('click', () => {
     selectedOption = optionEl1.textContent;
-    console.log(selectedOption);
+    // console.log(selectedOption);
 
 });
 
 optionEl2.addEventListener('click', () => {
     selectedOption = optionEl2.textContent;
-    console.log(selectedOption);
+    // console.log(selectedOption);
 
 });
 
 optionEl3.addEventListener('click', () => {
     selectedOption = optionEl3.textContent;
-    console.log(selectedOption);
+    // console.log(selectedOption);
 
 });
 
 optionEl4.addEventListener('click', () => {
     selectedOption = optionEl4.textContent;
-    console.log(selectedOption);
+    // console.log(selectedOption);
 
 });
 
